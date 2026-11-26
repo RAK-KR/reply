@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기계실 · 회신 4편</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Gothic+Coding:wght@400;700&family=Gothic+A1:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <script type="importmap">
+    { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+  </script>
+  <script src="../shared/progress.js"></script>
+  <script src="../shared/settings.js"></script>
+  <script>BSP.gate(4);</script>
+</head>
+<body>
+  <div id="game"></div>
+  <div id="grain"></div>
+  <div id="vignette"></div>
+  <div id="changed"></div>
+
+  <div id="crosshair"></div>
+  <div id="vcursor"></div>
+  <div id="prompt"></div>
+  <div id="toast"></div>
+  <div id="inventory"></div>
+
+  <div id="overlay">
+    <div id="panel">
+      <div id="panel-title"></div>
+      <div id="panel-body"></div>
+      <div id="panel-text"></div>
+      <div id="panel-buttons"></div>
+      <div id="panel-close">E · Esc · 바깥 클릭으로 닫기</div>
+    </div>
+  </div>
+
+  <div id="loading" class="screen show"><p>불러오는 중</p></div>
+
+  <div id="title" class="screen">
+    <div class="title-box">
+      <div class="series">회신 · 4편</div>
+      <h1>기계실</h1>
+      <h2>ENGINE ROOM</h2>
+      <button id="start">시작하기</button>
+      <div class="controls">
+        WASD 이동 · 마우스 시점 · E 또는 클릭 살펴보기<br>
+        Tab 수첩 · H 힌트(2단계) · Esc 일시정지
+      </div>
+      <label class="sens">소리 크기 <input id="vol" data-setting="vol" type="range" min="0" max="1" step="0.05" value="0.8"></label>
+      <label class="sens">마우스 감도 <input id="sens" data-setting="sens" type="range" min="0.3" max="2.5" step="0.05" value="1"></label>
+      <a class="eplink hublink" href="../">☰ 시리즈 목록</a>
+      <div class="note">지하 3층 기계실 · 헤드폰 권장 · PC 전용 · 3편을 먼저 해 주세요</div>
+      <a class="eplink" href="../ep3/">← 3편 · 공명로</a>
+    </div>
+  </div>
+
+  <div id="intro" class="screen">
+    <div id="intro-lines"></div>
+    <button id="intro-skip">들어간다</button>
+  </div>
+
+  <div id="pause" class="screen">
+    <p>클릭해서 계속</p>
+    <div class="pause-opts">
+      <label>소리 크기 <input data-setting="vol" type="range" min="0" max="1" step="0.05"></label>
+      <label>마우스 감도 <input data-setting="sens" type="range" min="0.3" max="2.5" step="0.05"></label>
+    </div>
+  </div>
+
+  <div id="fade"></div>
+  <div id="ending" class="screen"><div id="ending-lines"></div></div>
+  <div id="badend" class="screen"><div id="badend-lines"></div></div>
+
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
